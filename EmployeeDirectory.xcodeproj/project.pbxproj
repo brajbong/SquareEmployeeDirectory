@@ -20,6 +20,8 @@
 		AC31475C231A098500742986 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31475B231A098500742986 /* Resource.swift */; };
 		AC31475E231A0EE600742986 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31475D231A0EE600742986 /* URLSession+Extension.swift */; };
 		AC314760231A127300742986 /* NetworkSessionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31475F231A127300742986 /* NetworkSessionable.swift */; };
+		AC314762231A134300742986 /* NetworkSessionMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314761231A134300742986 /* NetworkSessionMocks.swift */; };
+		AC314764231A2B7700742986 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314763231A2B7700742986 /* NetworkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		AC31475B231A098500742986 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		AC31475D231A0EE600742986 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 		AC31475F231A127300742986 /* NetworkSessionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionable.swift; sourceTree = "<group>"; };
+		AC314761231A134300742986 /* NetworkSessionMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionMocks.swift; sourceTree = "<group>"; };
+		AC314763231A2B7700742986 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 			children = (
 				AC3147432319BC0900742986 /* EmployeeDirectoryTests.swift */,
 				AC3147452319BC0900742986 /* Info.plist */,
+				AC314761231A134300742986 /* NetworkSessionMocks.swift */,
+				AC314763231A2B7700742986 /* NetworkTests.swift */,
 			);
 			path = EmployeeDirectoryTests;
 			sourceTree = "<group>";
@@ -275,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC3147442319BC0900742986 /* EmployeeDirectoryTests.swift in Sources */,
+				AC314762231A134300742986 /* NetworkSessionMocks.swift in Sources */,
+				AC314764231A2B7700742986 /* NetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
