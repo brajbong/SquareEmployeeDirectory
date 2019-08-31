@@ -13,6 +13,8 @@
 		AC3147362319BC0900742986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3147352319BC0900742986 /* Assets.xcassets */; };
 		AC3147392319BC0900742986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3147372319BC0900742986 /* LaunchScreen.storyboard */; };
 		AC3147442319BC0900742986 /* EmployeeDirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147432319BC0900742986 /* EmployeeDirectoryTests.swift */; };
+		AC3147512319BD5800742986 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147502319BD5800742986 /* Employee.swift */; };
+		AC3147542319F45200742986 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147532319F45200742986 /* CacheService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		AC31473F2319BC0900742986 /* EmployeeDirectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeDirectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3147432319BC0900742986 /* EmployeeDirectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDirectoryTests.swift; sourceTree = "<group>"; };
 		AC3147452319BC0900742986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3147502319BD5800742986 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		AC3147532319F45200742986 /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		AC31472D2319BC0800742986 /* EmployeeDirectory */ = {
 			isa = PBXGroup;
 			children = (
+				AC31474E2319BC1D00742986 /* Library */,
 				AC31472E2319BC0800742986 /* AppDelegate.swift */,
 				AC3147302319BC0800742986 /* ViewController.swift */,
 				AC3147322319BC0800742986 /* Main.storyboard */,
@@ -94,6 +99,31 @@
 				AC3147452319BC0900742986 /* Info.plist */,
 			);
 			path = EmployeeDirectoryTests;
+			sourceTree = "<group>";
+		};
+		AC31474E2319BC1D00742986 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				AC3147522319F44200742986 /* Service */,
+				AC31474F2319BC3500742986 /* Model */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		AC31474F2319BC3500742986 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC3147502319BD5800742986 /* Employee.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC3147522319F44200742986 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AC3147532319F45200742986 /* CacheService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC3147312319BC0800742986 /* ViewController.swift in Sources */,
+				AC3147512319BD5800742986 /* Employee.swift in Sources */,
+				AC3147542319F45200742986 /* CacheService.swift in Sources */,
 				AC31472F2319BC0800742986 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
