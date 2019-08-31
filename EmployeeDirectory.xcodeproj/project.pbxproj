@@ -18,6 +18,8 @@
 		AC314757231A079B00742986 /* Bundle+SquareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314756231A079B00742986 /* Bundle+SquareURL.swift */; };
 		AC31475A231A094500742986 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314759231A094500742986 /* Networking.swift */; };
 		AC31475C231A098500742986 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31475B231A098500742986 /* Resource.swift */; };
+		AC31475E231A0EE600742986 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31475D231A0EE600742986 /* URLSession+Extension.swift */; };
+		AC314760231A127300742986 /* NetworkSessionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31475F231A127300742986 /* NetworkSessionable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		AC314756231A079B00742986 /* Bundle+SquareURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+SquareURL.swift"; sourceTree = "<group>"; };
 		AC314759231A094500742986 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		AC31475B231A098500742986 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		AC31475D231A0EE600742986 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
+		AC31475F231A127300742986 /* NetworkSessionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				AC314756231A079B00742986 /* Bundle+SquareURL.swift */,
+				AC31475D231A0EE600742986 /* URLSession+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 			children = (
 				AC314759231A094500742986 /* Networking.swift */,
 				AC31475B231A098500742986 /* Resource.swift */,
+				AC31475F231A127300742986 /* NetworkSessionable.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 				AC314757231A079B00742986 /* Bundle+SquareURL.swift in Sources */,
 				AC3147512319BD5800742986 /* Employee.swift in Sources */,
 				AC31475A231A094500742986 /* Networking.swift in Sources */,
+				AC31475E231A0EE600742986 /* URLSession+Extension.swift in Sources */,
 				AC3147542319F45200742986 /* CacheService.swift in Sources */,
+				AC314760231A127300742986 /* NetworkSessionable.swift in Sources */,
 				AC31472F2319BC0800742986 /* AppDelegate.swift in Sources */,
 				AC31475C231A098500742986 /* Resource.swift in Sources */,
 			);
