@@ -9,15 +9,15 @@
 import Foundation
 @testable import EmployeeDirectory
 
-class MockEmployeeService {
+class MockNetworkService {
     
     private func makeResponse(_ url: URL) -> Data {
         return try! Data(contentsOf: url)
     }
 }
 
-extension MockEmployeeService {
-    func fetchEmployees(resource: Resource, completion: @escaping (Result<Data, DataFetchError>) -> Void) {
+extension MockNetworkService: Networking {
+    func fetch(resource: Resource, completion: @escaping (Result<Data, DataFetchError>) -> Void) {
         let url = resource.url
         completion(.success(makeResponse(url)))
     }

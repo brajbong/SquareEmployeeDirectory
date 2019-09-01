@@ -45,7 +45,7 @@ extension EmployeeServiceTests {
     
     // MARK :- Utility
     private func makeSUT() -> Networking {
-        return MockEmployeeService()
+        return MockNetworkService()
     }
     
     private func makeURL(_ responseType: ResponseType) -> URL {
