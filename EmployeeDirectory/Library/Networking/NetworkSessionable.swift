@@ -10,5 +10,5 @@ import Foundation
 
 protocol NetworkSessionable {
     @discardableResult
-    func dataTask(with urlRequuest: URLRequest, completionHandler: @escaping Handler<Data>) -> URLSessionDataTask
+    func dataTask(with urlRequest: URLRequest, completionHandler: @escaping Handler<Data>) -> URLSessionDataTask
 }

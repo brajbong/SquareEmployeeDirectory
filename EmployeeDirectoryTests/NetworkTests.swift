@@ -12,7 +12,7 @@ class NetworkTests: XCTestCase {
     //test that we actually request the url we asked for
     func testGetEmployeesLoadsCorrectUrl() {
         //given
-        let url = URL(string: "https://s3.amazonaws.com/sq-mobile-interview/employees.json")!
+        let url = makeUrl()
         let networkSessionMock = NetworkSessionMockCorrectURL()
         let expectation = XCTestExpectation(description: "Get Employees: Correct URL used in request.")
         //when
@@ -28,7 +28,7 @@ class NetworkTests: XCTestCase {
     //test that a network call was actually started
     func testGetEmployeesCallsResume() {
         //given
-        let url = URL(string: "https://s3.amazonaws.com/sq-mobile-interview/employees.json")!
+        let url = makeUrl()
         let networkSessionMock = NetworkSessionMockNetworkRequestMade()
         let expectation = XCTestExpectation(description: "Get Employees: Actual request is being made.")
         //when
@@ -45,7 +45,7 @@ class NetworkTests: XCTestCase {
     func testGetEmployeesGetBackCorrectData() {
         //given
         let presetString = "Square employee list sample preset data"
-        let url = URL(string: "https://s3.amazonaws.com/sq-mobile-interview/employees.json")!
+        let url = makeUrl()
         let networkSessionMock = NetworkSessionMockGetCorrectPresetData()
         networkSessionMock.testData = Data(presetString.utf8)
         let expectation = XCTestExpectation(description: "Get Employees: request gets back proper data.")
@@ -60,5 +60,10 @@ class NetworkTests: XCTestCase {
         
         //then
         wait(for: [expectation], timeout: 5.0)
+    }
+    
+    //MARK :- Helpers
+    private func makeUrl(_ urlStr: String = "https://s3.amazonaws.com/sq-mobile-interview/employees.json") -> URL {
+        return URL(string: urlStr)!
     }
 }

@@ -30,4 +30,8 @@ struct Employee: Decodable {
         case team
         case employeeType = "employee_type"
     }
+    
+    static func make(data: Data) -> [Employee]? {
+        return try? JSONDecoder().decode([Employee].self, from: data)
+    }
 }

@@ -22,6 +22,10 @@
 		AC314760231A127300742986 /* NetworkSessionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31475F231A127300742986 /* NetworkSessionable.swift */; };
 		AC314762231A134300742986 /* NetworkSessionMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314761231A134300742986 /* NetworkSessionMocks.swift */; };
 		AC314764231A2B7700742986 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314763231A2B7700742986 /* NetworkTests.swift */; };
+		AC31476E231B639A00742986 /* MockEmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31476D231B639A00742986 /* MockEmployeeService.swift */; };
+		AC314770231B875C00742986 /* EmployeeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31476F231B875C00742986 /* EmployeeServiceTests.swift */; };
+		AC314774231C5B2100742986 /* StubbedJSONResponses in Resources */ = {isa = PBXBuildFile; fileRef = AC314773231C5B2100742986 /* StubbedJSONResponses */; };
+		AC314776231C5BF500742986 /* Employees.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314775231C5BF500742986 /* Employees.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		AC31475F231A127300742986 /* NetworkSessionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionable.swift; sourceTree = "<group>"; };
 		AC314761231A134300742986 /* NetworkSessionMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionMocks.swift; sourceTree = "<group>"; };
 		AC314763231A2B7700742986 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		AC31476D231B639A00742986 /* MockEmployeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeService.swift; sourceTree = "<group>"; };
+		AC31476F231B875C00742986 /* EmployeeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeServiceTests.swift; sourceTree = "<group>"; };
+		AC314773231C5B2100742986 /* StubbedJSONResponses */ = {isa = PBXFileReference; lastKnownFileType = folder; path = StubbedJSONResponses; sourceTree = "<group>"; };
+		AC314775231C5BF500742986 /* Employees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employees.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +117,12 @@
 		AC3147422319BC0900742986 /* EmployeeDirectoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				AC314773231C5B2100742986 /* StubbedJSONResponses */,
+				AC31476C231B634F00742986 /* Mocks and Stubs */,
 				AC3147432319BC0900742986 /* EmployeeDirectoryTests.swift */,
 				AC3147452319BC0900742986 /* Info.plist */,
-				AC314761231A134300742986 /* NetworkSessionMocks.swift */,
 				AC314763231A2B7700742986 /* NetworkTests.swift */,
+				AC31476F231B875C00742986 /* EmployeeServiceTests.swift */,
 			);
 			path = EmployeeDirectoryTests;
 			sourceTree = "<group>";
@@ -132,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				AC3147502319BD5800742986 /* Employee.swift */,
+				AC314775231C5BF500742986 /* Employees.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +172,15 @@
 				AC31475F231A127300742986 /* NetworkSessionable.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		AC31476C231B634F00742986 /* Mocks and Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				AC314761231A134300742986 /* NetworkSessionMocks.swift */,
+				AC31476D231B639A00742986 /* MockEmployeeService.swift */,
+			);
+			path = "Mocks and Stubs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC314774231C5B2100742986 /* StubbedJSONResponses in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +292,7 @@
 				AC31475E231A0EE600742986 /* URLSession+Extension.swift in Sources */,
 				AC3147542319F45200742986 /* CacheService.swift in Sources */,
 				AC314760231A127300742986 /* NetworkSessionable.swift in Sources */,
+				AC314776231C5BF500742986 /* Employees.swift in Sources */,
 				AC31472F2319BC0800742986 /* AppDelegate.swift in Sources */,
 				AC31475C231A098500742986 /* Resource.swift in Sources */,
 			);
@@ -281,8 +303,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC3147442319BC0900742986 /* EmployeeDirectoryTests.swift in Sources */,
+				AC314770231B875C00742986 /* EmployeeServiceTests.swift in Sources */,
 				AC314762231A134300742986 /* NetworkSessionMocks.swift in Sources */,
 				AC314764231A2B7700742986 /* NetworkTests.swift in Sources */,
+				AC31476E231B639A00742986 /* MockEmployeeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
