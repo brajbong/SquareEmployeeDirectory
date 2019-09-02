@@ -23,7 +23,7 @@
 	<key>Square</key>
 	<dict>
 		<key>employeesURL</key>
-		<string>https://s3.amazonaws.com/sq-mobile-interview/​employees.json</string>
+		<string>https://s3.amazonaws.com/sq-mobile-interview/employees.json</string>
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

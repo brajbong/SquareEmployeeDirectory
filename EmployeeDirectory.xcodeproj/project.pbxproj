@@ -28,6 +28,9 @@
 		AC314776231C5BF500742986 /* Employees.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314775231C5BF500742986 /* Employees.swift */; };
 		AC314778231C654100742986 /* EmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314777231C654100742986 /* EmployeeService.swift */; };
 		AC31477A231C667C00742986 /* MockEmployeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314779231C667C00742986 /* MockEmployeeService.swift */; };
+		AC314799231C6DD200742986 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314798231C6DD200742986 /* NetworkService.swift */; };
+		AC31479C231D814400742986 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31479B231D814400742986 /* EmployeeViewModel.swift */; };
+		AC31479F231D82D900742986 /* EmployeeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31479E231D82D900742986 /* EmployeeDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		AC314775231C5BF500742986 /* Employees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employees.swift; sourceTree = "<group>"; };
 		AC314777231C654100742986 /* EmployeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeService.swift; sourceTree = "<group>"; };
 		AC314779231C667C00742986 /* MockEmployeeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEmployeeService.swift; sourceTree = "<group>"; };
+		AC314798231C6DD200742986 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AC31479B231D814400742986 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		AC31479E231D82D900742986 /* EmployeeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,8 @@
 		AC31474E2319BC1D00742986 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				AC31479D231D82C100742986 /* Data Source */,
+				AC31479A231D813000742986 /* View Model */,
 				AC314758231A092B00742986 /* Networking */,
 				AC314755231A077D00742986 /* Extensions */,
 				AC3147522319F44200742986 /* Service */,
@@ -156,6 +164,7 @@
 			children = (
 				AC3147532319F45200742986 /* CacheService.swift */,
 				AC314777231C654100742986 /* EmployeeService.swift */,
+				AC314798231C6DD200742986 /* NetworkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -187,6 +196,22 @@
 				AC31476D231B639A00742986 /* MockNetworkService.swift */,
 			);
 			path = "Mocks and Stubs";
+			sourceTree = "<group>";
+		};
+		AC31479A231D813000742986 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC31479B231D814400742986 /* EmployeeViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		AC31479D231D82C100742986 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				AC31479E231D82D900742986 /* EmployeeDataSource.swift */,
+			);
+			path = "Data Source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,11 +321,14 @@
 				AC314778231C654100742986 /* EmployeeService.swift in Sources */,
 				AC3147512319BD5800742986 /* Employee.swift in Sources */,
 				AC31475A231A094500742986 /* Networking.swift in Sources */,
+				AC31479C231D814400742986 /* EmployeeViewModel.swift in Sources */,
+				AC31479F231D82D900742986 /* EmployeeDataSource.swift in Sources */,
 				AC31475E231A0EE600742986 /* URLSession+Extension.swift in Sources */,
 				AC3147542319F45200742986 /* CacheService.swift in Sources */,
 				AC314760231A127300742986 /* NetworkSessionable.swift in Sources */,
 				AC314776231C5BF500742986 /* Employees.swift in Sources */,
 				AC31472F2319BC0800742986 /* AppDelegate.swift in Sources */,
+				AC314799231C6DD200742986 /* NetworkService.swift in Sources */,
 				AC31475C231A098500742986 /* Resource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
