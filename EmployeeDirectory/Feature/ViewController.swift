@@ -13,13 +13,15 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "subtitleCell")
+        tableView.register(EmployeeCell.self, forCellReuseIdentifier: "EmployeeCell")
         dataSource.dataChanged = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
         }
         tableView.dataSource = dataSource
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 120
         dataSource.getEmployees()
     }
 }

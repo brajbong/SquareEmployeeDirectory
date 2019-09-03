@@ -25,18 +25,9 @@ extension EmployeeDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        var cell: UITableViewCell!
-
-        if let reuseCell = tableView.dequeueReusableCell(withIdentifier: "subtitleCell") {
-            cell = reuseCell
-        } else {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "subtitleCell")
-        }
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeCell", for: indexPath) as! EmployeeCell
         let employee = employeeVM.employees[indexPath.row]
-        cell.textLabel?.text = employee.fullName
-        cell.detailTextLabel?.text = employee.emailAddress
+        cell.employee = employee
         return cell
     }
 }
