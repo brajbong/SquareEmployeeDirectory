@@ -17,17 +17,18 @@ class EmployeeCell: UITableViewCell {
     
     private func setEmployeeData() {
         guard let employee = employee else { return }
-        empImageView.image = UIImage(named: "profile-icon-empty")
         namelabel.text = employee.fullName
-        desclabel.text = employee.biography
+        desclabel.text = employee.biography ?? ""
         emailLabel.text = employee.emailAddress
+        guard let photoUrl = employee.photoUrlSmall else {
+            empImageView.image = UIImage(named: "profile-icon-empty")
+            return
+        }
+        empImageView.loadImage(from: photoUrl, placeholder: "profile-icon-empty")
     }
     
-    private (set) lazy var empImageView: UIImageView = {
-       let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = UIColor.red
-        imageView.clipsToBounds = true
+    private (set) lazy var empImageView: CachedImageView = {
+       let imageView = CachedImageView()
         return imageView
     }()
     

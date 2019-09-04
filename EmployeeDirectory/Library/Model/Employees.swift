@@ -12,6 +12,13 @@ struct Employees: Decodable {
     let employees: [Employee]?
     
     static func make(data: Data) -> Employees? {
-        return try? JSONDecoder().decode(Employees.self, from: data)
+        do {
+            print(String(data: data, encoding: .utf8)!)
+            return try JSONDecoder().decode(Employees.self, from: data)
+        } catch {
+            print("error is: \(error.localizedDescription)")
+        }
+        return nil
+        //return try? JSONDecoder().decode(Employees.self, from: data)
     }
 }
