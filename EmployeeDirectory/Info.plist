@@ -22,6 +22,10 @@
 	<true/>
 	<key>Square</key>
 	<dict>
+		<key>EmployeesEmptyURL</key>
+		<string>https://s3.amazonaws.com/sq-mobile-interview/employess_empty.json</string>
+		<key>employeesMalformedDataURL</key>
+		<string>https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json</string>
 		<key>employeesURL</key>
 		<string>https://s3.amazonaws.com/sq-mobile-interview/employees.json</string>
 	</dict>

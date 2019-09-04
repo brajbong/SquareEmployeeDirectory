@@ -20,7 +20,9 @@ final class EmployeeService {
         return networking.fetch(resource: resource, completion: { result in
             if case .success(let data) = result {
                 completion(Employees.make(data: data)?.employees ?? [])
+                return
             }
+            completion([])
         })
     }
 }
