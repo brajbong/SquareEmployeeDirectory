@@ -9,6 +9,12 @@
 import Foundation
 
 struct Employee: Decodable {
+    enum EmployeeType: String, Decodable {
+        case FULL_TIME
+        case PART_TIME
+        case CONTRACTOR
+    }
+    
     let id: String
     let fullName: String
     let phoneNumber: String?
@@ -17,7 +23,7 @@ struct Employee: Decodable {
     let photoUrlSmall: String?
     let photoUrlLarge: String?
     let team: String
-    let employeeType: String
+    let employeeType: EmployeeType
     
     enum CodingKeys: String, CodingKey {
         case id = "uuid"
