@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class EmployeeListViewController: UIViewController {
     let dataSource = EmployeeDataSource()
     private (set) var tableView: UITableView!
     private var emptyView = EmptyView()
