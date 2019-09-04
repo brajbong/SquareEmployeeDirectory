@@ -10,11 +10,21 @@ import UIKit
 
 class EmployeeDataSource: NSObject {
     var employeeVM = EmployeeViewModel(employeeService: EmployeeService(networking: NetworkService()))
-    var dataChanged: (() -> Void)?
+    var dataChanged: ((DataFetchError?) -> Void)?
+    var isEmpty: Bool {
+        return employeeVM.employees.isEmpty
+    }
     
     func getEmployees() {
-        employeeVM.getEmployees { [weak self] success in
-            self?.dataChanged?()
+        employeeVM.getEmployees { [weak self] result in
+            guard let self = self else { return }
+            if case .success(_) = result {
+                self.dataChanged?(nil)
+            }
+            
+            if case .failure(let dataFetchError) = result {
+                self.dataChanged?(dataFetchError)
+            }
         }
     }
 }

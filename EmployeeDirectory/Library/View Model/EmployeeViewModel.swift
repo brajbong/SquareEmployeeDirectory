@@ -16,11 +16,18 @@ class EmployeeViewModel {
         self.employeeService = employeeService
     }
     
-    func getEmployees(completion: @escaping (Bool) -> Void) {
-        employeeService.fetchEmployees { [weak self] employees in
+    func getEmployees(completion: @escaping (Result<Bool, DataFetchError>) -> Void) {
+        employeeService.fetchEmployees { [weak self] result in
             guard let self = self else { return }
-            self.employees = employees
-            return !self.employees.isEmpty ? completion(true): completion(false)
+            if case .success(let employees) = result {
+                self.employees = employees
+                completion(.success(true))
+            }
+            
+            if case .failure(let error) = result {
+                completion(.failure(error))
+            }
         }
     }
+    
 }

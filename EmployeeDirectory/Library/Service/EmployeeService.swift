@@ -15,14 +15,18 @@ final class EmployeeService {
         self.networking = networking
     }
     
-    func fetchEmployees(completion: @escaping ([Employee]) -> Void) {
+    
+    func fetchEmployees(completion: @escaping (Result<[Employee], DataFetchError>) -> Void) {
         let resource = Resource(url: URL(string: Bundle.employeesURL)!)
         return networking.fetch(resource: resource, completion: { result in
             if case .success(let data) = result {
-                completion(Employees.make(data: data)?.employees ?? [])
+                completion(.success(Employees.make(data: data)?.employees ?? []))
                 return
             }
-            completion([])
+            
+            if case .failure(let error) = result {
+                completion(.failure(error))
+            }
         })
     }
 }

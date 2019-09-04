@@ -9,6 +9,14 @@
 import UIKit
 
 final class EmptyView: UIView {
+    public var text: String = "" {
+        didSet {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                self.label.text = self.text
+            }
+        }
+    }
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -20,6 +28,7 @@ final class EmptyView: UIView {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.numberOfLines = 0
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         return label
     }()
@@ -28,7 +37,7 @@ final class EmptyView: UIView {
         fatalError()
     }
     
-    required init(text: String) {
+    required init(text: String = "") {
         super.init(frame: .zero)
         isUserInteractionEnabled = false
         [imageView, label].forEach {
@@ -47,6 +56,7 @@ extension EmptyView {
             imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4),
             imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor, multiplier: 1),
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
+            label.widthAnchor.constraint(equalTo: widthAnchor),
             label.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10)
             ])
     }
