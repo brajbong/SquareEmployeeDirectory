@@ -41,3 +41,17 @@ struct Employee: Decodable {
         return try? JSONDecoder().decode([Employee].self, from: data)
     }
 }
+
+extension Employee {
+    init(id: String = "") {
+        self.id = id
+        self.fullName = ""
+        self.phoneNumber = ""
+        self.emailAddress = ""
+        self.biography = ""
+        self.photoUrlSmall = ""
+        self.photoUrlLarge = ""
+        self.team = ""
+        self.employeeType = .FULL_TIME
+    }
+}
