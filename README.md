@@ -1,4 +1,4 @@
-﻿EmployeeDirectory
+EmployeeDirectory
 
 > Focus Areas:
 
@@ -22,10 +22,11 @@
 	- Codable JSON parsing
 	- vc only deals with view lifecycle stuff and displaying data
 (in this simple case, the employee view model is an overkill but I still used it to show the structure for more complicated cases, where we might need the view model to make changes to the model/ format it to make it presentable on the view.)
-2. Modular
+
+3. Modular
 	 - When I say modular in the context of the app, I don't mean creating different modules for business logic, UI etc. Instead, I have tried to follow it more like a loose architectural principle.
 	 
-3. Clean code
+4. Clean code
 	- avoided using: unnecessary commenting, temp variables, bulky 3rd party cocoapods for simple use-cases.
 
 
