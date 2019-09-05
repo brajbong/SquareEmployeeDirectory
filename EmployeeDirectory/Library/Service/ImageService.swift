@@ -28,17 +28,19 @@ final class ImageService {
                 //request from network
                 let resource = Resource(url: url)
                 guard let self = self else {
+                    completion(nil)
                     return
                 }
                 self.networkService.fetch(resource: resource, completion: { remoteDataResult in
-                    if case .success(let data) = remoteDataResult {
+                    switch remoteDataResult {
+                    case .success(let data):
                         if let image = UIImage(data: data) {
                             //save in cache
                             self.cacheService.save(data: data, key: url.absoluteString)
-                            DispatchQueue.main.async {
-                                completion(image)
-                            }
+                            completion(image)
                         }
+                    case .failure(_):
+                        completion(nil)
                     }
                 })
             }

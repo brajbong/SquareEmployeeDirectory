@@ -15,10 +15,6 @@ extension Bundle {
 }
 
 extension Bundle {
-//    static private let squareRootKey = "Square"
-//    var employeesURL: String {
-//        return self[Bundle.squareRootKey]?["employeesURL"]
-//    }
     private var squareRootKey: [String: String] {
         let squareRootKey: [String: String] = self["Square"]!
         return squareRootKey

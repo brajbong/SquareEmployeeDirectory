@@ -22,7 +22,7 @@
 	<true/>
 	<key>Square</key>
 	<dict>
-		<key>EmployeesEmptyURL</key>
+		<key>employeesEmptyURL</key>
 		<string>https://s3.amazonaws.com/sq-mobile-interview/employess_empty.json</string>
 		<key>employeesMalformedDataURL</key>
 		<string>https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json</string>
@@ -31,8 +31,6 @@
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
