@@ -38,6 +38,7 @@
 		AC3147D02320497000742986 /* EmployeeListIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147CF2320497000742986 /* EmployeeListIntegrationTests.swift */; };
 		AC3147D22320BB5B00742986 /* ImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147D12320BB5B00742986 /* ImageServiceTests.swift */; };
 		AC3147D42320D08800742986 /* CacheServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147D32320D08800742986 /* CacheServiceTests.swift */; };
+		AC3147D62321BE0500742986 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AC3147D52321BE0500742986 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		AC3147CF2320497000742986 /* EmployeeListIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListIntegrationTests.swift; sourceTree = "<group>"; };
 		AC3147D12320BB5B00742986 /* ImageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceTests.swift; sourceTree = "<group>"; };
 		AC3147D32320D08800742986 /* CacheServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheServiceTests.swift; sourceTree = "<group>"; };
+		AC3147D52321BE0500742986 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		AC3147222319BC0800742986 = {
 			isa = PBXGroup;
 			children = (
+				AC3147D52321BE0500742986 /* README.md */,
 				AC31472D2319BC0800742986 /* EmployeeDirectory */,
 				AC3147422319BC0900742986 /* EmployeeDirectoryTests */,
 				AC31472C2319BC0800742986 /* Products */,
@@ -348,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3147D62321BE0500742986 /* README.md in Resources */,
 				AC3147392319BC0900742986 /* LaunchScreen.storyboard in Resources */,
 				AC3147362319BC0900742986 /* Assets.xcassets in Resources */,
 			);
