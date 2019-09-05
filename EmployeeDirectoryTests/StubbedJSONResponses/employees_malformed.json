@@ -1,0 +1,24 @@
+{
+    "employees" : [
+    {
+        "uuid" : "some-uuid1",
+        "phone_number" : "5556669870",
+        "email_address" : "erogers.demo@squareup.com",
+        "biography" : "A short biography describing the employee.",
+        "photo_url_small" : "https://some.url/path1.jpg",
+        "photo_url" : "https://some.url/path2.jpg",
+        "employee_type" : "FULL_TIME",
+    },
+    {
+        "uuid" : "some-uuid2",
+        "full_name" : "John Doe",
+        "phone_number" : "5556669871",
+        "email_address" : "John.doe@squareup.com",
+        "biography" : "A short biography describing the employee.",
+        "photo_url_small" : "https://some.url/path1.jpg",
+        "photo_url_large" : "https://some.url/path2.jpg",
+        "team" : "Seller",
+    },
+    
+    ]
+}

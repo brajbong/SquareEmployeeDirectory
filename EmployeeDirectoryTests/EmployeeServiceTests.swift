@@ -31,7 +31,21 @@ class EmployeeServiceTests: XCTestCase {
             expectation.fulfill()
         }
         
-        //then
+        wait(for: [expectation], timeout: 5.0)
+    }
+    
+    func testEmployeesMalformedResponse() {
+        let expectation = XCTestExpectation(description: "Employee service: malformed response.")
+        makeSUT().fetch(resource: Resource(url: makeURL(.malformed))) { result in
+            guard case .success(let data) = result  else {
+                XCTFail()
+                return
+            }
+            
+            XCTAssertNil(Employees.make(data: data))
+            expectation.fulfill()
+        }
+        
         wait(for: [expectation], timeout: 5.0)
     }
 }
@@ -40,7 +54,6 @@ extension EmployeeServiceTests {
     private enum ResponseType {
         case correct
         case malformed
-        case empty
     }
     
     // MARK :- Utility
@@ -52,8 +65,8 @@ extension EmployeeServiceTests {
         switch responseType {
         case .correct:
             return url(for: "employees")
-        default:
-            return url(for: "employees")
+        case .malformed:
+            return url(for: "employees_malformed")
         }
     }
     

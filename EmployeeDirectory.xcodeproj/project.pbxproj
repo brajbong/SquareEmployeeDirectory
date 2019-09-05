@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AC31472F2319BC0800742986 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31472E2319BC0800742986 /* AppDelegate.swift */; };
-		AC3147312319BC0800742986 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147302319BC0800742986 /* ViewController.swift */; };
+		AC3147312319BC0800742986 /* EmployeeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147302319BC0800742986 /* EmployeeListViewController.swift */; };
 		AC3147342319BC0800742986 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3147322319BC0800742986 /* Main.storyboard */; };
 		AC3147362319BC0900742986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3147352319BC0900742986 /* Assets.xcassets */; };
 		AC3147392319BC0900742986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3147372319BC0900742986 /* LaunchScreen.storyboard */; };
-		AC3147442319BC0900742986 /* EmployeeDirectoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147432319BC0900742986 /* EmployeeDirectoryTests.swift */; };
 		AC3147512319BD5800742986 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147502319BD5800742986 /* Employee.swift */; };
 		AC3147542319F45200742986 /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147532319F45200742986 /* CacheService.swift */; };
 		AC314757231A079B00742986 /* Bundle+SquareURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC314756231A079B00742986 /* Bundle+SquareURL.swift */; };
@@ -36,6 +35,10 @@
 		AC3147C7231F39C600742986 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147C6231F39C600742986 /* CachedImageView.swift */; };
 		AC3147C9231F3AF200742986 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147C8231F3AF200742986 /* ImageService.swift */; };
 		AC3147CC231F493A00742986 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147CB231F493A00742986 /* EmptyView.swift */; };
+		AC3147CE231F8DB800742986 /* EmployeeListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147CD231F8DB800742986 /* EmployeeListViewControllerTests.swift */; };
+		AC3147D02320497000742986 /* EmployeeListIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147CF2320497000742986 /* EmployeeListIntegrationTests.swift */; };
+		AC3147D22320BB5B00742986 /* ImageServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147D12320BB5B00742986 /* ImageServiceTests.swift */; };
+		AC3147D42320D08800742986 /* CacheServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3147D32320D08800742986 /* CacheServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,13 +54,12 @@
 /* Begin PBXFileReference section */
 		AC31472B2319BC0800742986 /* EmployeeDirectory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeDirectory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC31472E2319BC0800742986 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC3147302319BC0800742986 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC3147302319BC0800742986 /* EmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
 		AC3147332319BC0800742986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC3147352319BC0900742986 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC3147382319BC0900742986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC31473A2319BC0900742986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC31473F2319BC0900742986 /* EmployeeDirectoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeDirectoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC3147432319BC0900742986 /* EmployeeDirectoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDirectoryTests.swift; sourceTree = "<group>"; };
 		AC3147452319BC0900742986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC3147502319BD5800742986 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		AC3147532319F45200742986 /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
@@ -82,6 +84,10 @@
 		AC3147C6231F39C600742986 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
 		AC3147C8231F3AF200742986 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		AC3147CB231F493A00742986 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		AC3147CD231F8DB800742986 /* EmployeeListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewControllerTests.swift; sourceTree = "<group>"; };
+		AC3147CF2320497000742986 /* EmployeeListIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListIntegrationTests.swift; sourceTree = "<group>"; };
+		AC3147D12320BB5B00742986 /* ImageServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceTests.swift; sourceTree = "<group>"; };
+		AC3147D32320D08800742986 /* CacheServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +145,11 @@
 			children = (
 				AC314773231C5B2100742986 /* StubbedJSONResponses */,
 				AC31476C231B634F00742986 /* Mocks and Stubs */,
-				AC3147432319BC0900742986 /* EmployeeDirectoryTests.swift */,
 				AC3147452319BC0900742986 /* Info.plist */,
 				AC314763231A2B7700742986 /* NetworkTests.swift */,
 				AC31476F231B875C00742986 /* EmployeeServiceTests.swift */,
+				AC3147CD231F8DB800742986 /* EmployeeListViewControllerTests.swift */,
+				AC3147D12320BB5B00742986 /* ImageServiceTests.swift */,
 			);
 			path = EmployeeDirectoryTests;
 			sourceTree = "<group>";
@@ -208,6 +215,8 @@
 				AC314779231C667C00742986 /* MockEmployeeService.swift */,
 				AC314761231A134300742986 /* NetworkSessionMocks.swift */,
 				AC31476D231B639A00742986 /* MockNetworkService.swift */,
+				AC3147CF2320497000742986 /* EmployeeListIntegrationTests.swift */,
+				AC3147D32320D08800742986 /* CacheServiceTests.swift */,
 			);
 			path = "Mocks and Stubs";
 			sourceTree = "<group>";
@@ -231,7 +240,7 @@
 		AC3147A0231E10C100742986 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				AC3147302319BC0800742986 /* ViewController.swift */,
+				AC3147302319BC0800742986 /* EmployeeListViewController.swift */,
 				AC3147A1231E10D200742986 /* Employee List */,
 				AC3147A2231E110500742986 /* EmployeeCell.swift */,
 			);
@@ -363,7 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC3147312319BC0800742986 /* ViewController.swift in Sources */,
+				AC3147312319BC0800742986 /* EmployeeListViewController.swift in Sources */,
 				AC314757231A079B00742986 /* Bundle+SquareURL.swift in Sources */,
 				AC314778231C654100742986 /* EmployeeService.swift in Sources */,
 				AC3147512319BD5800742986 /* Employee.swift in Sources */,
@@ -389,12 +398,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC3147442319BC0900742986 /* EmployeeDirectoryTests.swift in Sources */,
+				AC3147D02320497000742986 /* EmployeeListIntegrationTests.swift in Sources */,
+				AC3147D22320BB5B00742986 /* ImageServiceTests.swift in Sources */,
 				AC31477A231C667C00742986 /* MockEmployeeService.swift in Sources */,
 				AC314770231B875C00742986 /* EmployeeServiceTests.swift in Sources */,
 				AC314762231A134300742986 /* NetworkSessionMocks.swift in Sources */,
 				AC314764231A2B7700742986 /* NetworkTests.swift in Sources */,
 				AC31476E231B639A00742986 /* MockNetworkService.swift in Sources */,
+				AC3147CE231F8DB800742986 /* EmployeeListViewControllerTests.swift in Sources */,
+				AC3147D42320D08800742986 /* CacheServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
