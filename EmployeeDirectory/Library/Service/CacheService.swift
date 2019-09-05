@@ -8,25 +8,52 @@
 
 import Foundation
 
-final class CacheService {
-    private let memCache = NSCache<NSString, NSData>()
-    private let diskPath: URL
-    private let fileManager: FileManager
-    private let serialQueue = DispatchQueue(label: "br.square")
+final class DiskCache {
+    let url: URL
+    let fileManager: FileManager
     
-    init(fileManager: FileManager = FileManager.default) {
+    fileprivate init(fileManager: FileManager = FileManager.default) {
         self.fileManager = fileManager
         do {
             let docDir = try fileManager.url(for: .documentDirectory,
                                              in: .userDomainMask,
                                              appropriateFor: nil,
                                              create: true)
-            diskPath = docDir.appendingPathComponent("square")
-            try createDirectoryIfNeeded()
+            url = docDir.appendingPathComponent("square")
+            createDirectoryIfNeeded()
         } catch {
             fatalError()
         }
     }
+    
+    fileprivate func getData(for key: String) -> Data? {
+        return try? Data(contentsOf: getFilePath(for: key))
+    }
+    
+    fileprivate func write(data: Data, key: String) {
+        try? data.write(to: getFilePath(for: key))
+    }
+    
+    private func getFilePath(for key: String) -> URL {
+        return url.appendingPathComponent(key)
+    }
+}
+
+extension DiskCache {
+    fileprivate func createDirectoryIfNeeded() {
+        guard fileManager.fileExists(atPath: url.path) else {
+            return
+        }
+        
+        try? fileManager.createDirectory(at: url,
+                                         withIntermediateDirectories: false, attributes: nil)
+    }
+}
+
+final class CacheService {
+    private let memCache = NSCache<NSString, NSData>()
+    private let diskCache: DiskCache? = DiskCache()
+    private let serialQueue = DispatchQueue(label: "br.square")
     
     func load(key: String, completion: @escaping (Data?) -> Void) {
         serialQueue.async {
@@ -37,7 +64,7 @@ final class CacheService {
             }
             
             //object present in disk
-            if let data = try? Data(contentsOf: self.filePath(key: key)) {
+            if let data = self.diskCache?.getData(for: key) {
                 //set it in memcache
                 self.memCache.setObject(data as NSData, forKey: key as NSString)
                 completion(data)
@@ -51,21 +78,7 @@ final class CacheService {
     func save(data: Data, key: String, completion: (() -> Void)? = nil) {
         serialQueue.async {
             self.memCache.setObject(data as NSData, forKey: key as NSString)
-            try? data.write(to: self.filePath(key: key))
+            self.diskCache?.write(data: data, key: key)
         }
-    }
-}
-
-extension CacheService {
-    fileprivate func createDirectoryIfNeeded() throws {
-        if fileManager.fileExists(atPath: diskPath.path) {
-            try fileManager.createDirectory(at: diskPath,
-                                            withIntermediateDirectories: false,
-                                            attributes: nil)
-        }
-    }
-    
-    fileprivate func filePath(key: String) -> URL {
-        return diskPath.appendingPathComponent(key)
     }
 }

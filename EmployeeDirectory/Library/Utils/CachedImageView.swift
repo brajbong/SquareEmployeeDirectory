@@ -46,7 +46,6 @@ class CachedImageView: UIImageView {
     }
     
     func loadImage(from endPoint: String, placeholder: String) {
-        
         guard let url = URL(string: endPoint) else {
             return
         }
