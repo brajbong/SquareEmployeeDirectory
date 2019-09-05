@@ -35,6 +35,8 @@ class EmployeeListIntegrationTests: XCTestCase {
         XCTAssertEqual(cell.namelabel.text, EmployeeData.expectedFullName)
         XCTAssertEqual(cell.desclabel.text, EmployeeData.expectedBiography)
         XCTAssertEqual(cell.emailLabel.text, EmployeeData.expectedEmailAddress)
+        XCTAssertEqual(cell.teamLabel.text, EmployeeData.expectedTeam)
+        XCTAssertEqual(cell.empTypeLabel.text, Employee.EmployeeType.type(.FULL_TIME)())
     }
     
     //MARK :- Utility methods

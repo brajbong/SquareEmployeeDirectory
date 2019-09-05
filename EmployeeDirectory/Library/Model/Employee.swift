@@ -13,6 +13,17 @@ struct Employee: Decodable {
         case FULL_TIME
         case PART_TIME
         case CONTRACTOR
+        
+        func type() -> String {
+            switch self {
+            case .FULL_TIME:
+                return "Full-Time"
+            case .PART_TIME:
+                return "Part-Time"
+            case .CONTRACTOR:
+                return "Contractor"
+            }
+        }
     }
     
     let id: String
