@@ -27,7 +27,7 @@
 		<key>employeesMalformedDataURL</key>
 		<string>https://s3.amazonaws.com/sq-mobile-interview/employees_malformed.json</string>
 		<key>employeesURL</key>
-		<string>https://s3.amazonaws.com/sq-mobile-interview/employees.json</string>
+		<string>https://api.myjson.com/bins/838rh</string>
 	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

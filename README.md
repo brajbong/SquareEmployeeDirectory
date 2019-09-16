@@ -49,9 +49,6 @@ I have used services to do network/ async data work and injecting them as depend
 
 App is only meant for iPhones in portrait mode at this time.
 
-> Time Spent
-
-Worked in small chunks for past 6 days. Estimated time spent would be 8 hours. I don't code very fast.
 
 > Additional
 
